@@ -4,9 +4,13 @@
 #
 #    pip-compile --output-file src/requirements.txt src/requirements.in
 #
+asn1crypto==0.24.0        # via cryptography
+authlib==0.11
 certifi==2019.3.9         # via requests
+cffi==1.12.3              # via cryptography
 chardet==3.0.4            # via requests
 click==7.0                # via flask
+cryptography==2.6.1       # via authlib
 fitbit==0.3.0
 flask==1.0.2
 idna==2.8                 # via requests
@@ -14,9 +18,10 @@ itsdangerous==1.1.0       # via flask
 jinja2==2.10.1            # via flask
 markupsafe==1.1.1         # via jinja2
 oauthlib==3.0.1           # via requests-oauthlib
+pycparser==2.19           # via cffi
 python-dateutil==2.8.0    # via fitbit
 requests-oauthlib==1.2.0  # via fitbit
-requests==2.21.0          # via requests-oauthlib
-six==1.12.0               # via python-dateutil
+requests==2.21.0          # via authlib, requests-oauthlib
+six==1.12.0               # via cryptography, python-dateutil
 urllib3==1.24.3           # via requests
 werkzeug==0.15.2          # via flask
